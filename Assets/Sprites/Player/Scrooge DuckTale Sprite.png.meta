@@ -1,0 +1,901 @@
+fileFormatVersion: 2
+guid: 9133805ed867644439d2d653248ef756
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6351809052494908077
+    second: Scrooge DuckTale Sprite_0
+  - first:
+      213: 2840988242068293481
+    second: scroogeIdle
+  - first:
+      213: 1489633057255088260
+    second: Scrooge DuckTale Sprite_2
+  - first:
+      213: 718299955704638359
+    second: Scrooge DuckTale Sprite_3
+  - first:
+      213: 5701703150484761123
+    second: Scrooge DuckTale Sprite_4
+  - first:
+      213: -953979860639500936
+    second: walk1
+  - first:
+      213: -5258317365103249029
+    second: walk2
+  - first:
+      213: 3549724603295878155
+    second: walk3
+  - first:
+      213: -3144801639561257264
+    second: Scrooge DuckTale Sprite_8
+  - first:
+      213: -2726154303350030347
+    second: jump
+  - first:
+      213: -7914458962007660626
+    second: death
+  - first:
+      213: -6537304784293771320
+    second: Scrooge DuckTale Sprite_11
+  - first:
+      213: -7313674541720383143
+    second: Scrooge DuckTale Sprite_40
+  - first:
+      213: 8055162757017886712
+    second: Scrooge DuckTale Sprite_41
+  - first:
+      213: -984617957799667722
+    second: bounceAttack1
+  - first:
+      213: -4999451063365175523
+    second: bounceAttack2
+  - first:
+      213: -5361702435760903772
+    second: Scrooge DuckTale Sprite_45
+  - first:
+      213: 2693286512615224524
+    second: duck2
+  - first:
+      213: -104050742468447597
+    second: Scrooge DuckTale Sprite_48
+  - first:
+      213: -1099698717181860964
+    second: stuck
+  - first:
+      213: -4387396834813965023
+    second: Scrooge DuckTale Sprite_50
+  - first:
+      213: -4946949547824906501
+    second: duck1
+  - first:
+      213: -5293681269406327705
+    second: Scrooge DuckTale Sprite_74
+  - first:
+      213: -222286304383218337
+    second: Scrooge DuckTale Sprite_75
+  - first:
+      213: -7125410569031287246
+    second: climb1
+  - first:
+      213: 7814264724458281637
+    second: climb2
+  - first:
+      213: 332250380814256928
+    second: Scrooge DuckTale Sprite_78
+  - first:
+      213: 1722376461380725767
+    second: Scrooge DuckTale Sprite_79
+  - first:
+      213: 4538355764393865370
+    second: prePutt1
+  - first:
+      213: 4257701098913524149
+    second: prePutt2
+  - first:
+      213: -4779681352894094672
+    second: Scrooge DuckTale Sprite_82
+  - first:
+      213: -3629798836997486321
+    second: Scrooge DuckTale Sprite_83
+  - first:
+      213: -3289502321275406160
+    second: putt1
+  - first:
+      213: 4684166615009428536
+    second: putt2
+  - first:
+      213: 5926797446509256719
+    second: Scrooge DuckTale Sprite_103
+  - first:
+      213: -3683646454684524006
+    second: Scrooge DuckTale Sprite_104
+  - first:
+      213: -5796289225259621424
+    second: puttSuccess1
+  - first:
+      213: 1188370802594712284
+    second: puttSuccess2
+  - first:
+      213: 283042875504579610
+    second: Scrooge DuckTale Sprite_108
+  - first:
+      213: 975888187132651555
+    second: Scrooge DuckTale Sprite_109
+  - first:
+      213: -3134194270873471262
+    second: failedPutt1
+  - first:
+      213: -9188278634514446251
+    second: failedPutt2
+  - first:
+      213: -4254114736134133754
+    second: Scrooge DuckTale Sprite_112
+  - first:
+      213: -7448106604289778909
+    second: badEnd1
+  - first:
+      213: 2344850438625790169
+    second: badEnd2
+  - first:
+      213: -6754471503008690783
+    second: badEnd3
+  - first:
+      213: 6684709921606860547
+    second: okayEnding1
+  - first:
+      213: -3242144056836426410
+    second: okayEnding2
+  - first:
+      213: -7305123465987724463
+    second: goodEnding1
+  - first:
+      213: 5826967420477182240
+    second: goodEnding2
+  - first:
+      213: -2992193540646572713
+    second: goodEnding3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scroogeIdle
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 355
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967ca8301c73d6720800000000000000
+      internalID: 2840988242068293481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 355
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875b4b30f58c2c2f0800000000000000
+      internalID: -953979860639500936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 355
+        width: 20
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79b0c85734b607b0800000000000000
+      internalID: -5258317365103249029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 355
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c4aed28b7234130800000000000000
+      internalID: 3549724603295878155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 357
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff3be9da11ca2ad0800000000000000
+      internalID: -2726154303350030347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scrooge DuckTale Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 351
+        width: 24
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c745bf4fe3d645a0800000000000000
+      internalID: -6537304784293771320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounceAttack1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 307
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f751e12f2fe552f0800000000000000
+      internalID: -984617957799667722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bounceAttack2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 307
+        width: 24
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d177b200fb16e9ab0800000000000000
+      internalID: -4999451063365175523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 307
+        width: 24
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4f7c640d9706520800000000000000
+      internalID: 2693286512615224524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stuck
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 307
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c932c6ad7d51db0f0800000000000000
+      internalID: -1099698717181860964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 307
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfefd18a897e85bb0800000000000000
+      internalID: -4946949547824906501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climb1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 261
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e731ae6d47d1d90800000000000000
+      internalID: -7125410569031287246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climb2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 258
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa933a7d58d17c60800000000000000
+      internalID: 7814264724458281637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prePutt1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 258
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90fa01c58a7bfe30800000000000000
+      internalID: 4538355764393865370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prePutt2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 258
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9e7885794661b30800000000000000
+      internalID: 4257701098913524149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putt1
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 258
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b87e8c31175952d0800000000000000
+      internalID: -3289502321275406160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: putt2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 258
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8348164f7b0810140800000000000000
+      internalID: 4684166615009428536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puttSuccess1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 208
+        width: 26
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3e9f0e8a17f8fa0800000000000000
+      internalID: -5796289225259621424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puttSuccess2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 208
+        width: 18
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda8a1ed2f0fd7010800000000000000
+      internalID: 1188370802594712284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: failedPutt1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 208
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6b5839aea1184d0800000000000000
+      internalID: -3134194270873471262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: failedPutt2
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 208
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5588474734dac7080800000000000000
+      internalID: -9188278634514446251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badEnd1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 160
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b1112518203a890800000000000000
+      internalID: -7448106604289778909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badEnd2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 160
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d885b5ec059a8020800000000000000
+      internalID: 2344850438625790169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: badEnd3
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 160
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad0ba964fb4342a0800000000000000
+      internalID: -6754471503008690783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okayEnding1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 160
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ff7efa14cd4cc50800000000000000
+      internalID: 6684709921606860547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: okayEnding2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 160
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655fe9d68279103d0800000000000000
+      internalID: -3242144056836426410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodEnding1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 160
+        width: 27
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b6e6179ecfe9a90800000000000000
+      internalID: -7305123465987724463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodEnding2
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 160
+        width: 31
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021115f0ffb8dd050800000000000000
+      internalID: 5826967420477182240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goodEnding3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 160
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dea8ef3d79976d0800000000000000
+      internalID: -2992193540646572713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      climb2: 7814264724458281637
+      failedPutt1: -3134194270873471262
+      jump: -2726154303350030347
+      putt1: -3289502321275406160
+      puttSuccess2: 1188370802594712284
+      okayEnding2: -3242144056836426410
+      scroogeIdle: 2840988242068293481
+      okayEnding1: 6684709921606860547
+      failedPutt2: -9188278634514446251
+      walk1: -953979860639500936
+      goodEnding1: -7305123465987724463
+      prePutt1: 4538355764393865370
+      badEnd2: 2344850438625790169
+      badEnd3: -6754471503008690783
+      goodEnding2: 5826967420477182240
+      Scrooge DuckTale Sprite_11: -6537304784293771320
+      climb1: -7125410569031287246
+      duck2: 2693286512615224524
+      duck1: -4946949547824906501
+      bounceAttack1: -984617957799667722
+      prePutt2: 4257701098913524149
+      putt2: 4684166615009428536
+      badEnd1: -7448106604289778909
+      stuck: -1099698717181860964
+      bounceAttack2: -4999451063365175523
+      walk3: 3549724603295878155
+      puttSuccess1: -5796289225259621424
+      walk2: -5258317365103249029
+      goodEnding3: -2992193540646572713
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
