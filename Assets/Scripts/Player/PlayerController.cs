@@ -127,11 +127,6 @@ public class PlayerController : MonoBehaviour
             sr.flipX = horizontalInput < 0;
         }
 
-        //sr.flipX = (horizontalInput < 0) ? true : (horizontalInput > 0) ? false : sr.flipX;
-
-        //void OnTriggerEnter2D(Collider2D other)
-
-
     }
 
     

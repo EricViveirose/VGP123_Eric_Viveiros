@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     public Transform player;
 
     public float minXClamp = -0.9f;
-    public float maxXClamp = 23.05f;
+    public float maxXClamp = 185f;
 
      void LateUpdate()
     {
