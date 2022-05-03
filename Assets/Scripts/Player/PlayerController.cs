@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
 
+    public PhysicsMaterial2D pogoJump;
+
 
 
     // Start is called before the first frame update
@@ -45,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
         if (groundCheckRadius <= 0)     
         {
-            groundCheckRadius = 0.005f;    
+            groundCheckRadius = 0.01f;    
         }
        
         
@@ -55,26 +57,77 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
-        //float verticalInput = Input.GetAxisRaw("Vertical");
+        AnimatorClipInfo[] curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
+        
+
+            //float verticalInput = Input.GetAxisRaw("Vertical");
+            float previousGroundHeight = -3.868245f;
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);  
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded ) //find the jump button
         {
-            rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * jumpForce);
+            rb.velocity = Vector2.zero;                  //makes the rigidbody velocity 0
+            rb.AddForce(Vector2.up * jumpForce);       //add force in .up direction(positive button) * jumpforce
         }
 
-        Vector2 moveDirection = new Vector2 (horizontalInput * speed, rb.velocity.y);    
-        rb.velocity = moveDirection;
+        //if (Input.GetButtonDown("Vertical") && !isGrounded)
+        // {
+        //     rb.velocity = Vector3.down;
+        //     rb.AddForce(Vector3.down * speed);
+        // }
+
+        //Vector2 moveDirection = new Vector2(horizontalInput * speed, rb.velocity.y);
+        //rb.velocity = moveDirection;
+
+        if (curPlayingClip.Length > 0)
+        {
+            if (curPlayingClip[0].clip.name != "Fire")
+            {
+                Vector2 moveDirection = new Vector2(horizontalInput * speed, rb.velocity.y);
+                rb.velocity = moveDirection;
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
+        }
+        
+        if (!isGrounded && Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            anim.SetBool("pogoJump", true);
+            rb.sharedMaterial = pogoJump;
+        }
+
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            anim.SetBool("pogoJump", false);
+            rb.sharedMaterial = null;
+        }
+
+        if (anim.GetBool("pogoJump") && isGrounded)
+        {
+            float currentGroundHeight = transform.position.y;
+            if (currentGroundHeight > previousGroundHeight + 0.2)
+            {
+                previousGroundHeight = currentGroundHeight;
+                rb.velocity = Vector2.zero;
+                rb.AddForce(Vector2.up * jumpForce);
+
+            }
+        }
 
         anim.SetFloat("speed", Mathf.Abs(horizontalInput));
+        //anim.SetFloat("pogoJump", Mathf.Abs(verticalInput));
         anim.SetBool("isGrounded", isGrounded);
+        //anim.SetBool("isAttack", isAttack);
 
         if (horizontalInput != 0)                                 
         {
             sr.flipX = horizontalInput < 0;
         }
+
+        //sr.flipX = (horizontalInput < 0) ? true : (horizontalInput > 0) ? false : sr.flipX;
 
         //void OnTriggerEnter2D(Collider2D other)
 

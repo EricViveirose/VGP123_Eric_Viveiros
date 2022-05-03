@@ -413,7 +413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duck2
+      name: ScroogeFire2
       rect:
         serializedVersion: 2
         x: 178
@@ -455,7 +455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duck1
+      name: Scroogefire1
       rect:
         serializedVersion: 2
         x: 153
@@ -853,6 +853,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: FireHat
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 326
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b2a4601c270834f953153c20de3808
+      internalID: 280053336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -867,6 +888,7 @@ TextureImporter:
       climb2: 7814264724458281637
       failedPutt1: -3134194270873471262
       jump: -2726154303350030347
+      ScroogeFire2: 2693286512615224524
       putt1: -3289502321275406160
       puttSuccess2: 1188370802594712284
       okayEnding2: -3242144056836426410
@@ -874,6 +896,7 @@ TextureImporter:
       okayEnding1: 6684709921606860547
       failedPutt2: -9188278634514446251
       walk1: -953979860639500936
+      FireHat: 280053336
       goodEnding1: -7305123465987724463
       prePutt1: 4538355764393865370
       badEnd2: 2344850438625790169
@@ -881,14 +904,13 @@ TextureImporter:
       goodEnding2: 5826967420477182240
       Scrooge DuckTale Sprite_11: -6537304784293771320
       climb1: -7125410569031287246
-      duck2: 2693286512615224524
-      duck1: -4946949547824906501
+      badEnd1: -7448106604289778909
       bounceAttack1: -984617957799667722
       prePutt2: 4257701098913524149
       putt2: 4684166615009428536
-      badEnd1: -7448106604289778909
       stuck: -1099698717181860964
       bounceAttack2: -4999451063365175523
+      Scroogefire1: -4946949547824906501
       walk3: 3549724603295878155
       puttSuccess1: -5796289225259621424
       walk2: -5258317365103249029
