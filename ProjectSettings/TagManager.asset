@@ -41,7 +41,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: PlayArea
     uniqueID: 4218039995
     locked: 0
   - name: Obstacles

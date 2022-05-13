@@ -31,7 +31,7 @@ public class ShootProjectile : MonoBehaviour
         AnimatorClipInfo[] curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
         if (curPlayingClip.Length > 0)
         {
-            if (Input.GetButtonDown("Fire1") && curPlayingClip[0].clip.name != "Fire")
+            if (Input.GetButtonDown("Fire1") && curPlayingClip[0].clip.name != "Fire" && curPlayingClip[0].clip.name != "Lookup")
                 anim.SetTrigger("Fire");
         }
         
@@ -48,6 +48,7 @@ public class ShootProjectile : MonoBehaviour
         {
             Projectile curProjectile = Instantiate(projectilePrefab, projectileSpawnPointLeft.position, projectileSpawnPointLeft.rotation);
             curProjectile.speed = -projectileSpeed;
+            curProjectile.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 }
