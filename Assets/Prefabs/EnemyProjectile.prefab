@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6306754756223749755}
   - component: {fileID: 4256740723580854276}
   m_Layer: 0
-  m_Name: FireHat
-  m_TagString: Untagged
+  m_Name: EnemyProjectile
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -76927301
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 280053336, guid: 9133805ed867644439d2d653248ef756, type: 3}
+  m_Sprite: {fileID: 1379029209, guid: 6286d3cb4dfb1a94baf93130ce2d7f47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   lifetime: 0
+  damageValue: 0
 --- !u!50 &6306754756223749755
 Rigidbody2D:
   serializedVersion: 4
@@ -132,9 +133,9 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026205301, y: 0.014606714}
+  m_Offset: {x: -0.3717456, y: 0.09990758}
   serializedVersion: 2
-  m_Radius: 0.19513059
+  m_Radius: 0.11416721

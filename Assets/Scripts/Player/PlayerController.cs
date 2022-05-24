@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce);       //add force in .up direction(positive button) * jumpforce
         }
 
-        if (curPlayingClip.Length > 0)
+        if (curPlayingClip.Length > 0)                     //PrePutt Double Button Combo Wack. Gotta make a box collider and turn it into a trigger
         {
             if (canPrePutt)
             {
@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp("Fire1") || verticalInput < 0.1)
+        if (Input.GetButtonUp("Fire1") || verticalInput < 0.1)    //Don't do combo if you pressin down
         {
             anim.SetBool("combo", false);
         }
@@ -145,13 +145,13 @@ public class PlayerController : MonoBehaviour
 
         if (anim.GetBool("pogoJump") && isGrounded)
         {
-            float previousGroundHeight = -3.86f;
+            float previousGroundHeight = -3.371726f;
             float currentGroundHeight = transform.position.y;
             if (currentGroundHeight > previousGroundHeight + 0.2 )
             {
                 previousGroundHeight = currentGroundHeight;
                 rb.velocity = Vector2.zero;
-                rb.AddForce(Vector2.up * jumpForce *2);
+                rb.AddForce(Vector2.up * jumpForce * 2);
 
             }
         }
@@ -169,21 +169,21 @@ public class PlayerController : MonoBehaviour
     }
 
     //2 button combo for prePutt
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            canPrePutt = true;
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.layer == 8)
+    //    {
+    //        canPrePutt = true;
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            canPrePutt = false;
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.layer == 8)
+    //    {
+    //        canPrePutt = false;
+    //    }
+    //}
 
     //PowerUps Below
     public void StartSpeedChange()
@@ -237,5 +237,16 @@ public class PlayerController : MonoBehaviour
         jumpForce /= 2;
         coroutineRunning = false;
     }
-    //PowerUps Above
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Squish")
+        {
+            collision.gameObject.GetComponentInParent<EnemyWalker>().IsSquished();
+
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * jumpForce);
+        }
+    }
+
 }
