@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
+    
 
     public float minXClamp = -0.26f;
     public float maxXClamp = 41.84f;
@@ -13,25 +13,25 @@ public class CameraFollow : MonoBehaviour
 
      void LateUpdate()
     {
-        if (player)
+        if (GameManager.instance.playerInstance)
         {
             Vector3 cameraTransform;
 
             cameraTransform = transform.position;
 
-            cameraTransform.x = player.transform.position.x;
+            cameraTransform.x = GameManager.instance.playerInstance.gameObject.transform.position.x;
             cameraTransform.x = Mathf.Clamp(cameraTransform.x, minXClamp, maxXClamp);
 
             transform.position = cameraTransform;
         }
 
-        if (player)
+        if (GameManager.instance.playerInstance)
         {
             Vector3 cameraTransform;
 
             cameraTransform = transform.position;
 
-            cameraTransform.y = player.transform.position.y;
+            cameraTransform.x = GameManager.instance.playerInstance.gameObject.transform.position.y;
             cameraTransform.y = Mathf.Clamp(cameraTransform.y, minYClamp, maxYClamp);
 
             transform.position = cameraTransform;

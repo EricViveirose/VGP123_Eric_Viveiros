@@ -18,19 +18,20 @@ public class Collectible : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerController curPlayer = collision.gameObject.GetComponent<PlayerController>();
 
             switch (curCollectible)
             {
 
                 case CollectibleType.LIFE:
-                    curPlayer.lives++;
+                    GameManager.instance.lives++;
                     break;
+
                 case CollectibleType.POWERJUMP:
-                    curPlayer.StartJumpForceChange();
+                    GameManager.instance.playerInstance.StartJumpForceChange();
                     break;
+
                 case CollectibleType.POWERSPEED:
-                    curPlayer.StartSpeedChange();
+                    GameManager.instance.playerInstance.StartSpeedChange();
                     break;
             }
             Destroy(gameObject);
