@@ -41,11 +41,11 @@ public class EnemyTurret : Enemy
             {
                 if (GameManager.instance.playerInstance.gameObject.transform.position.x < transform.position.x)              //shoot player if within distance (5m)
                 {
-                    sr.flipX = true;
+                    sr.flipX = false;
                 }
                 else
                 {
-                    sr.flipX = false;
+                    sr.flipX = true;
                 }
             }
 
@@ -70,7 +70,7 @@ public class EnemyTurret : Enemy
     public void Fire()
     {
         timeSinceLastFire = Time.time;
-        if (sr.flipX)
+        if (!sr.flipX)
         {
             Projectile temp = Instantiate(projectilePrefab, spawnPointLeft.position, spawnPointLeft.rotation);
             temp.speed = -projectileForce;
