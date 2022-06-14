@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
@@ -8,6 +9,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
+    public ObjectSounds sfxManager;
+
+    public AudioClip jumpSound;
+    public AudioClip playerDeathSound;
+    public AudioMixerGroup soundFXGroup;
 
     public float speed;
     public int jumpForce;
@@ -29,6 +35,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        sfxManager = GetComponent<ObjectSounds>();
 
         //Could be used as a double check to ensure ground check is set if we are null
         if (!groundCheck)
@@ -51,7 +58,10 @@ public class PlayerController : MonoBehaviour
             groundCheckRadius = 0.01f;
         }
 
-
+        if (!sfxManager)
+        {
+            sfxManager = gameObject.AddComponent<ObjectSounds>();
+        }
     }
 
     // Update is called once per frame
@@ -69,6 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;                  //makes the rigidbody velocity 0
             rb.AddForce(Vector2.up * jumpForce);       //add force in .up direction(positive button) * jumpforce
+            sfxManager.Play(jumpSound, soundFXGroup);     //jump sound effect
         }
 
         if (curPlayingClip.Length > 0)                     //PrePutt Double Button Combo Wack. Gotta make a box collider and turn it into a trigger

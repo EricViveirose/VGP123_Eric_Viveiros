@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnemyTurret : Enemy
 {
@@ -13,6 +14,10 @@ public class EnemyTurret : Enemy
     public Transform spawnPointLeft;
     public Transform spawnPointRight;
     public Projectile projectilePrefab;
+    public AudioClip fireSFX;
+    public AudioClip deathSFX;
+    public AudioMixerGroup soundFXMixer;
+
     // Start is called before the first frame update
     public override void Start()
     {
@@ -31,6 +36,7 @@ public class EnemyTurret : Enemy
     {
         base.Death();
         Destroy(gameObject);
+        GameManager.instance.playerInstance.GetComponent<ObjectSounds>().Play(deathSFX, soundFXMixer);
     }
     // Update is called once per frame
     void Update()
@@ -57,6 +63,7 @@ public class EnemyTurret : Enemy
                 if (Time.time >= timeSinceLastFire + projectileFireRate)
                 {
                     anim.SetBool("Fire", true);
+                    GameManager.instance.playerInstance.GetComponent<ObjectSounds>().Play(fireSFX, soundFXMixer);
                 }
             }
             else

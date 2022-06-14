@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class CanvasManager : MonoBehaviour
     [Header("Slider")]
     public Slider volSlider;
 
+    public AudioMixer mixer;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Level");
@@ -47,6 +50,9 @@ public class CanvasManager : MonoBehaviour
     {
         if (volSliderText)
             volSliderText.text = value.ToString();
+
+        if (mixer)
+            mixer.SetFloat("MasterVol", value);
     }
 
     void OnLifeValueChange(int value)
@@ -67,10 +73,10 @@ public class CanvasManager : MonoBehaviour
             backButton.onClick.AddListener(() => ShowMainMenu());
 
         if (returnToMenuButton)
-            returnToMenuButton.onClick.AddListener(() => ShowMainMenu());
+            returnToMenuButton.onClick.AddListener(() => ReturnToMenu());
 
-        //if (returnToGameButton)
-        //    returnToGameButton.onClick.AddListener(() => Time.timeScale = 0());
+        if (returnToGameButton)
+            returnToGameButton.onClick.AddListener(() => ReturnToGame());
 
         if (quitButton)
             quitButton.onClick.AddListener(() => QuitGame());
@@ -96,19 +102,36 @@ void Update()
                 {
                     pauseMenu.SetActive(!pauseMenu.activeSelf);
 
-                    //HINT FOR THE LAB
+                   
                     if (pauseMenu.activeSelf)
                     {
-                    Time.timeScale = 0;
+                        Time.timeScale = 0;
+                        GameManager.instance.playerInstance.GetComponent<PlayerController>().enabled = false;
+                        GameManager.instance.playerInstance.GetComponent<ShootProjectile>().enabled = false;
                     }
                     else
                     {
-                    Time.timeScale = 1;
+                        Time.timeScale = 1;
+                        GameManager.instance.playerInstance.GetComponent<PlayerController>().enabled = true;
+                        GameManager.instance.playerInstance.GetComponent<ShootProjectile>().enabled = true;
                     }
                 }
             }
-
         }
+
+    public void ReturnToGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+        GameManager.instance.playerInstance.GetComponent<PlayerController>().enabled = true;
+        GameManager.instance.playerInstance.GetComponent<ShootProjectile>().enabled = true;
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Start");
+        Time.timeScale = 1;
+    }
 
         public void QuitGame()
         {

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
+
 public class GameManager : MonoBehaviour
 {
     static GameManager _instance = null;
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     private int _lives = 1;
     public int maxLives = 3;
+    
+
 
     public int lives
     {
@@ -23,8 +26,10 @@ public class GameManager : MonoBehaviour
         {
             if (_lives > value)
             {
-                Destroy(playerInstance.gameObject);
-                SpawnPlayer(currentLevel.spawnPoint);
+                //Destroy(playerInstance.gameObject);
+                //SpawnPlayer(currentLevel.spawnPoint);
+                playerInstance.transform.position = currentLevel.spawnPoint.position;
+                playerInstance.sfxManager.Play(playerInstance.playerDeathSound, playerInstance.soundFXGroup);
             }
 
             _lives = value;
@@ -35,7 +40,7 @@ public class GameManager : MonoBehaviour
 
             if (_lives < 0)
                 GameOver();
-
+         
             Debug.Log("Lives Set To: " + lives.ToString());
         }
     }

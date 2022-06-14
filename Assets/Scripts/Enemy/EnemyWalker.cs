@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 [RequireComponent (typeof(Rigidbody2D))]
@@ -9,6 +10,9 @@ public class EnemyWalker : Enemy
 
     Rigidbody2D rb;
     [SerializeField] float speed;
+    public AudioClip deathSFX;
+    public AudioClip headBopSFX;
+    public AudioMixerGroup soundFXMixer;
 
 
     public override void Start()
@@ -58,6 +62,7 @@ public class EnemyWalker : Enemy
         anim.SetBool("Death", true);
         rb.velocity = Vector2.zero;
         Destroy(transform.parent.gameObject, 1.0f);
+        GameManager.instance.playerInstance.GetComponent<ObjectSounds>().Play(deathSFX, soundFXMixer);
     }
 
     public void IsSquished()
@@ -65,5 +70,6 @@ public class EnemyWalker : Enemy
         anim.SetBool("Squish", true);
         rb.velocity = Vector2.zero;
         Destroy(transform.parent.gameObject, 1.0f);
+        GameManager.instance.playerInstance.GetComponent<ObjectSounds>().Play(headBopSFX, soundFXMixer);
     }
 }

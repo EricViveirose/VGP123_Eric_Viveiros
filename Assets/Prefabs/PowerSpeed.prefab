@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curCollectible: 1
+  pickupSound: {fileID: 8300000, guid: 51c838a93ac006f4ea9b197fcd1bdc90, type: 3}
+  soundFXGroup: {fileID: 1401044955417293247, guid: 5c3a2d322595df443baf367d2277697d, type: 2}
 --- !u!61 &5826453048458104854
 BoxCollider2D:
   m_ObjectHideFlags: 0
