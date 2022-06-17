@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class CanvasManager : MonoBehaviour
 {
+    [Header("Images")]
+    public Image[] hearts;
+
     [Header("Buttons")]
     public Button startButton;
     public Button settingsButton;
@@ -28,6 +31,8 @@ public class CanvasManager : MonoBehaviour
     public Slider volSlider;
 
     public AudioMixer mixer;
+    public AudioClip pauseSFX;
+    public AudioMixerGroup soundFXMixer;
 
     public void StartGame()
     {
@@ -59,6 +64,14 @@ public class CanvasManager : MonoBehaviour
     {
         if (livesText)
             livesText.text = value.ToString();
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < GameManager.instance.lives)
+                hearts[i].gameObject.SetActive(true);
+            else
+                hearts[i].gameObject.SetActive(false);
+        }
     }
 
     void Start()
@@ -89,7 +102,6 @@ public class CanvasManager : MonoBehaviour
         }
 
         //Add Listener to Lives value change
-        if (livesText)
             GameManager.instance.OnLifeValueChanged.AddListener((value) => OnLifeValueChange(value));
 }
 
@@ -102,10 +114,11 @@ void Update()
                 {
                     pauseMenu.SetActive(!pauseMenu.activeSelf);
 
-                   
-                    if (pauseMenu.activeSelf)
+
+                if (pauseMenu.activeSelf)
                     {
                         Time.timeScale = 0;
+                        GameManager.instance.playerInstance.GetComponent<ObjectSounds>().Play(pauseSFX, soundFXMixer);
                         GameManager.instance.playerInstance.GetComponent<PlayerController>().enabled = false;
                         GameManager.instance.playerInstance.GetComponent<ShootProjectile>().enabled = false;
                     }

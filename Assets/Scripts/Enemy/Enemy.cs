@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     protected int _health;
     [SerializeField] protected int maxHealth;
 
-    public int health
+    public int Health
     {
         get { return _health; }
         set
@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void TakeDamage (int damage)
     {
-        health -= damage;
+        Health -= damage;
     }
 
     public virtual void Start()
@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
         if (maxHealth <= 0)
             maxHealth = 10;
 
-        health = maxHealth;
+        Health = maxHealth;
 
 
     }

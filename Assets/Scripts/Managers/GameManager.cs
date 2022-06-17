@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     private int _lives = 1;
-    public int maxLives = 3;
-    
+    public int maxLives = 3;    
 
 
     public int lives
@@ -38,7 +37,7 @@ public class GameManager : MonoBehaviour
             if (_lives > maxLives)
                 _lives = maxLives;
 
-            if (_lives < 0)
+            if (_lives <= 0)
                 GameOver();
          
             Debug.Log("Lives Set To: " + lives.ToString());

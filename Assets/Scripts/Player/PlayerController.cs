@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     public PhysicsMaterial2D pogoJump;
     bool canPrePutt = false;
+    bool isPogoJump = false;
 
 
 
@@ -75,51 +76,51 @@ public class PlayerController : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
 
-        if (Input.GetButtonDown("Jump") && isGrounded) //find the jump button
+        if (Input.GetButtonDown("Jump") && isGrounded)        //jump while grounded
         {
-            rb.velocity = Vector2.zero;                  //makes the rigidbody velocity 0
-            rb.AddForce(Vector2.up * jumpForce);       //add force in .up direction(positive button) * jumpforce
-            sfxManager.Play(jumpSound, soundFXGroup);     //jump sound effect
+            rb.velocity = Vector2.zero;                      //makes the rigidbody velocity 0
+            rb.AddForce(Vector2.up * jumpForce);             //add force in .up direction(positive button) * jumpforce
+            sfxManager.Play(jumpSound, soundFXGroup);        //jump sound effect
         }
 
-        if (curPlayingClip.Length > 0)                     //PrePutt Double Button Combo Wack. Gotta make a box collider and turn it into a trigger
+        //if (curPlayingClip.Length > 0)                     //PrePutt Double Button Combo Wack. Gotta make a box collider and turn it into a trigger
+        //{
+        //    if (canPrePutt)
+        //    {
+        //        if (Mathf.Abs(horizontalInput) > 0)
+        //        {
+        //            anim.SetBool("putt", true);
+        //        }
+        //    }
+        //    if (curPlayingClip[0].clip.name == "Lookup")
+        //    {
+        //        if (Input.GetButtonDown("Fire1"))
+        //        {
+        //            anim.SetBool("combo", true);
+        //        }
+        //    }
+        if (curPlayingClip[0].clip.name != "Fire")
         {
-            if (canPrePutt)
-            {
-                if (Mathf.Abs(horizontalInput) > 0)
-                {
-                    anim.SetBool("putt", true);
-                }
-            }
-            if (curPlayingClip[0].clip.name == "Lookup")
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    anim.SetBool("combo", true);
-                }
-            }
-            else if (curPlayingClip[0].clip.name != "Fire")
-            {
-                Vector2 moveDirection = new Vector2(horizontalInput * speed, rb.velocity.y);
-                rb.velocity = moveDirection;
-            }
-            else
-            {
-                rb.velocity = Vector2.zero;
-            }
+            Vector2 moveDirection = new Vector2(horizontalInput * speed, rb.velocity.y);
+            rb.velocity = moveDirection;
         }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
+    
 
-        if (Input.GetButtonUp("Fire1") || verticalInput < 0.1)    //Don't do combo if you pressin down
-        {
-            anim.SetBool("combo", false);
-        }
+        //if (Input.GetButtonUp("Fire1") || verticalInput< 0.1)    //Don't do combo if you pressin down
+        //{
+        //    anim.SetBool("combo", false);
+        //}
 
 
         //Pogo Jump Key Press
-        if (!isGrounded && Input.GetButtonDown("Vertical"))
+        if (!isGrounded && Input.GetButtonDown("Vertical"))        //press Down vertical while in air to trigger pogoStick
         {
             anim.SetBool("pogoJump", true);
-            rb.sharedMaterial = pogoJump;
+            //rb.sharedMaterial = pogoJump;
         }
 
         if (Input.GetButtonUp("Vertical"))
@@ -128,17 +129,29 @@ public class PlayerController : MonoBehaviour
             rb.sharedMaterial = null;
         }
 
-        if (anim.GetBool("pogoJump") && isGrounded)
+        if (anim.GetBool("pogoJump") && isGrounded)                             //Keep the height of the PogoJump the same. So distance from the ground is always the same
         {
-            float previousGroundHeight = -3.371726f;
-            float currentGroundHeight = transform.position.y;
-            if (currentGroundHeight > previousGroundHeight + 0.2 )
+            if (!isPogoJump)
             {
-                previousGroundHeight = currentGroundHeight;
                 rb.velocity = Vector2.zero;
-                rb.AddForce(Vector2.up * jumpForce * 2);
-
+                rb.AddForce(Vector2.up * jumpForce * 1.25f);
+                isPogoJump = true;
             }
+
+            //float previousGroundHeight = -3.371726f;
+            //float currentGroundHeight = transform.position.y;
+            //if (currentGroundHeight > previousGroundHeight + 0.2 )
+            //{
+            //    previousGroundHeight = currentGroundHeight;
+            //    rb.velocity = Vector2.zero;
+            //    rb.AddForce(Vector2.up * jumpForce * 1.25f);
+
+            //}
+        }
+        else if (!isGrounded && anim.GetBool("pogoJump"))
+        {
+            if (isPogoJump)
+                isPogoJump = false;
         }
 
         anim.SetFloat("speed", Mathf.Abs(horizontalInput));
@@ -151,6 +164,7 @@ public class PlayerController : MonoBehaviour
             sr.flipX = horizontalInput < 0;
         }
 
+        
     }
 
     //2 button combo for prePutt
